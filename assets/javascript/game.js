@@ -62,3 +62,30 @@ var QandA = {
 			}
 
 	};
+
+//==============================================================//
+var start = function() { 
+	//When buttons is clicked clear triviabox
+	$('.startbutton').click(function() {
+		//Emptys trivia section
+        $('.triviabox').empty();
+        $('.introfont').empty();
+        $('.namefont').empty();
+        $('img').remove();
+        $('.mainboxfont').append('Trivia Game');
+        // $('.mainboxfont').empty();
+		createQuestions();
+	});
+}
+
+var createQuestions = function() {
+	timerStart();
+	var question = QandA[QNumber]['question'];
+	var questionDiv = $('<div>');
+	questionDiv.addClass('question');
+	questionDiv.text(question);
+	$('.triviabox').append(questionDiv);
+	AnswerButtons();
+}
+
+start();
