@@ -10,7 +10,8 @@ var QandA = {
 				correct:'Perignon',
 				right: 'Correct!',
 				wrong: 'Wrong!',
-				imageUrl:'assets/images/answers/champagne.gif'
+				correctImage:'assets/images/answers/champagne.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
 			   },
 			2:{
 				question:'Which company does VW Group not own?',
@@ -18,7 +19,8 @@ var QandA = {
 				correct:'Ferrari',
 				right: 'Correct!',
 				wrong: 'Wrong!',
-				imageUrl:'assets/images/answers/ferrari.gif'
+				correctImage:'assets/images/answers/ferrari.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
 			},
 			3:{
 				question:'Where is the Sea of Tranquility?',
@@ -26,7 +28,8 @@ var QandA = {
 				correct:'Moon',
 				right: 'Correct!',
 				wrong: 'Wrong!',
-				imageUrl:'assets/images/answers/moon.gif'
+				correctImage:'assets/images/answers/moon.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
             },
             4:{
 				question:'What is the name of the newest Country to be recognized by UN?',
@@ -34,7 +37,8 @@ var QandA = {
 				correct:'South Sudan',
 				right: 'Correct!',
 				wrong: 'Wrong!',
-				imageUrl:'assets/images/answers/southsudan.gif'
+				correctImage:'assets/images/answers/southsudan.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
 			},
             5:{
 				question:'What is the name of the biggest island?',
@@ -42,7 +46,8 @@ var QandA = {
 				correct:'Greenland',
 				right: 'Correct!',
 				wrong: 'Wrong!',
-				imageUrl:'assets/images/answers/greenland.gif'
+				correctImage:'assets/images/answers/greenland.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
 			},
             6:{
 				question:'What is the last name of Jay-Z',
@@ -50,7 +55,8 @@ var QandA = {
 				correct:'Carter',
 				right: 'Correct!',
 				wrong: 'Wrong!',
-				imageUrl:'assets/images/answers/jayz.gif'
+				correctImage:'assets/images/answers/jayz.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
 			},
             7:{
 				question:"In 'The Golden Apple of Discord' who was NOT the Goddesses fighting for the Apple?",
@@ -58,7 +64,8 @@ var QandA = {
 				correct:'Eris',
 				right: 'Correct!',
 				wrong: 'Wrong!',
-				imageUrl:'assets/images/answers/eris.gif'
+				correctImage:'assets/images/answers/eris.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
 			}
 
 	};
@@ -126,7 +133,8 @@ var timeDecrement = function() {
 var AnswerCheck = function() {
    var userAnswer = $(this).data('type');
    var correctAnswer = QandA[QNumber]['correct'];
-   var correctImg = QandA[QNumber]['imageUrl'];
+   var correctImg = QandA[QNumber]['correctImage'];
+   var wrongImg = QandA[QNumber]['wrongImage'];
    var right = QandA[QNumber]['right'];
    var wrong = QandA[QNumber]['wrong'];
    console.log(QNumber);
@@ -149,10 +157,10 @@ var AnswerCheck = function() {
 	if(QNumber <= 7) {
 		setTimeout(function() {
 		$('.triviabox').empty();
-		createQuestions();}, 100);
+		createQuestions();}, 3000);
 	}
 		else {
-			setTimeout(gameOver, 3500);
+			setTimeout(gameOver, 3000);
 			}
 	}
 	else{
@@ -161,7 +169,7 @@ var AnswerCheck = function() {
 		$('.triviabox').empty();
         var newImg = $('<img>');
         newImg.addClass('size');
-		newImg.attr('src', correctImg);
+		newImg.attr('src', wrongImg);
 		$('.triviabox').append(newImg);
 		var newDiv = $('<div>');
 		newDiv.addClass('wrongAnswer');
@@ -172,10 +180,10 @@ var AnswerCheck = function() {
 			if(QNumber <= 7) {  
 				setTimeout(function() {
 				$('.triviabox').empty();
-				createQuestions();},100);
+				createQuestions();}, 3000);
 			}
 				else {
-					setTimeout(gameOver, 3500);
+					setTimeout(gameOver, 3000);
 					}
 	}
 }
