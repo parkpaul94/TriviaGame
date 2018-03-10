@@ -157,10 +157,10 @@ var AnswerCheck = function() {
 	if(QNumber <= 7) {
 		setTimeout(function() {
 		$('.triviabox').empty();
-		createQuestions();}, 3000);
+		createQuestions();}, 4500);
 	}
 		else {
-			setTimeout(gameOver, 3000);
+			setTimeout(gameOver, 4500);
 			}
 	}
 	else{
@@ -180,10 +180,10 @@ var AnswerCheck = function() {
 			if(QNumber <= 7) {  
 				setTimeout(function() {
 				$('.triviabox').empty();
-				createQuestions();}, 3000);
+				createQuestions();}, 4500);
 			}
 				else {
-					setTimeout(gameOver, 3000);
+					setTimeout(gameOver, 4500);
 					}
 	}
 }
