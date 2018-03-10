@@ -67,10 +67,66 @@ body {
     transition: .5s ease-in-out;
 }
 
-.question, .answers {
+.question, .answers, .gameOver, .score{
     font-family: 'Raleway', sans-serif;
  	padding: 30px;
  	font-size: 20px;
     margin: 10px;
      
  }
+
+ .wrongAnswer, .rightAnswer {
+    font-family: 'Raleway', sans-serif;
+    padding: 10px;
+ }
+
+ .mainbutton { 
+  color: #FFFFFF; 
+  background: linear-gradient(to bottom right, #DE1122, #8A484F);
+  border-radius: 10px 10px 10px 10px;
+  transition: .25s ease-in-out;
+
+} 
+ 
+.mainbutton:hover { 
+  color: #FFFFFF; 
+  background-color: #851515; 
+  transform: rotate(-10deg);
+  transition: .25s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+
+} 
+
+.progress-bar-color {
+    background-color: #612E44 !important;
+}
+
+.resetbutton {
+    width: 150px;
+    height: 55px;
+    opacity: .1;
+    transition: .25s ease-in-out;
+}
+
+.resetbutton:hover {
+    opacity: 1;
+    transition: .25s ease-in-out;
+}
+
+.clearbutton {
+    width: 150px;
+    height: 55px;
+    color: #FFFFFF; 
+    background: linear-gradient(to bottom right, #32375B, #3D3C5E);
+    opacity: .1;
+    transition: .25s ease-in-out;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.clearbutton:hover {
+    opacity: 1;
+    color: #FFFFFF; 
+    transform: rotate(10deg);
+    transition: .25s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
