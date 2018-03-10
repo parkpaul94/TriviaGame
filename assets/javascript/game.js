@@ -121,17 +121,31 @@ var timeDecrement = function() {
 		clearInterval(timer);
 		AnswerCheck();
 	}
-	
 }
 
 var AnswerCheck = function() {
-	//Get users answer choice
    var userAnswer = $(this).data('type');
    var correctAnswer = QandA[QNumber]['correct'];
    var correctImg = QandA[QNumber]['imageUrl'];
    var right = QandA[QNumber]['right'];
    var wrong = QandA[QNumber]['wrong'];
    console.log(QNumber);
+   
+   if(userAnswer === correctAnswer) {
+		$('.timerSection').empty();
+		rCount++;
+		$('.triviabox').empty();
+		var newImg = $('<img>');
+		newImg.addClass('size');
+		newImg.attr('src',correctImg);
+		$('.triviabox').append(newImg);
+		var newDiv = $('<div>');
+		newDiv.addClass('rightAnswer');
+		newDiv.html(right + '<br>' + 'The answer was: ' + correctAnswer + '!');
+		$('.triviabox').append(newDiv);
+		clearInterval(timer)
+		QNumber++;
+	}
 }
 
 start();
