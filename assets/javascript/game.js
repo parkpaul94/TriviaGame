@@ -137,7 +137,7 @@ var AnswerCheck = function() {
 		$('.triviabox').empty();
 		var newImg = $('<img>');
 		newImg.addClass('size');
-		newImg.attr('src',correctImg);
+		newImg.attr('src', correctImg);
 		$('.triviabox').append(newImg);
 		var newDiv = $('<div>');
 		newDiv.addClass('rightAnswer');
@@ -151,9 +151,32 @@ var AnswerCheck = function() {
 		$('.triviabox').empty();
 		createQuestions();}, 100);
 	}
-	else {
-		setTimeout(gameOver, 3500);
+		else {
+			setTimeout(gameOver, 3500);
+			}
 	}
+	else{
+        $('.timerSection').empty();
+		wCount++;
+		$('.triviabox').empty();
+        var newImg = $('<img>');
+        newImg.addClass('size');
+		newImg.attr('src', correctImg);
+		$('.triviabox').append(newImg);
+		var newDiv = $('<div>');
+		newDiv.addClass('wrongAnswer');
+		newDiv.html(wrong + '<br>' + 'The answer was: ' + correctAnswer + '!')
+		$('.triviabox').append(newDiv);
+		clearInterval(timer)
+		QNumber++;
+			if(QNumber <= 7) {  
+				setTimeout(function() {
+				$('.triviabox').empty();
+				createQuestions();},100);
+			}
+				else {
+					setTimeout(gameOver, 3500);
+					}
 	}
 }
 
@@ -169,4 +192,5 @@ var gameOver = function() {
 	gameoverDiv.html('Game Over!');
 	$('.triviabox').append(gameoverDiv);
 }
+
 start();
