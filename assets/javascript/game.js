@@ -65,15 +65,12 @@ var QandA = {
 
 //==============================================================//
 var start = function() { 
-	//When buttons is clicked clear triviabox
 	$('.startbutton').click(function() {
-		//Emptys trivia section
         $('.triviabox').empty();
         $('.introfont').empty();
         $('.namefont').empty();
         $('img').remove();
         $('.mainboxfont').append('Trivia Game');
-        // $('.mainboxfont').empty();
 		createQuestions();
 	});
 }
@@ -85,7 +82,36 @@ var createQuestions = function() {
 	questionDiv.addClass('question');
 	questionDiv.text(question);
 	$('.triviabox').append(questionDiv);
-	AnswerButtons();
+	Answers();
 }
+
+var Answers = function() {
+	var answerLength = QandA[QNumber]['answers'].length;
+	for(var i = 0; i < answerLength;i++) {
+		var answers = QandA[QNumber]['answers'][i];
+		var newbutton = $('<button>');
+		newbutton.addClass('answers ansbtn');
+		newbutton.attr('data-type',answers);
+		newbutton.text(answers);
+		$('.triviabox').append(newbutton);
+	}
+	$(document).off('click','.answers',AnswerCheck);
+	$(document).on('click','.answers',AnswerCheck);
+}
+
+var timerStart = function() { 
+	$('.timerSection').empty();
+	gameTime = 100;
+	var timeTag = $('<div>');
+	timeTag.addClass('time');
+	timeTag.addClass('progress');
+	var progressBar = $('<div>');
+    progressBar.addClass('progress-bar progress-bar-striped progress-bar-color');
+	progressBar.width(gameTime + '%');
+	$('.timerSection').append(timeTag);
+	$('.time').append(progressBar);	
+	timer = setInterval(timeDecrement, 100);
+}
+
 
 start();
