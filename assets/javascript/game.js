@@ -97,7 +97,7 @@ var Answers = function() {
 	for(var i = 0; i < answerLength;i++) {
 		var answers = QandA[QNumber]['answers'][i];
 		var newbutton = $('<button>');
-		newbutton.addClass('answers ansbtn');
+		newbutton.addClass('answers mainbutton');
 		newbutton.attr('data-type',answers);
 		newbutton.text(answers);
 		$('.triviabox').append(newbutton);
@@ -199,6 +199,26 @@ var gameOver = function() {
 	gameoverDiv.addClass('gameOver');
 	gameoverDiv.html('Game Over!');
 	$('.triviabox').append(gameoverDiv);
+
+	var newbutton = $('<button>');
+    var clearbutton = $('<button>');
+    newbutton.addClass('mainbutton resetbutton');
+    clearbutton.addClass('clearbutton');
+    newbutton.text('Replay');
+    clearbutton.text('Clear');
+    $('.triviabox').append(newbutton);
+    $('.triviabox').append(clearbutton);
+	trivTime = 100;
+	QNumber = 1;
+	rCount = 0;
+	wCount = 0;
+	$('.resetbutton').on('click',function() {
+		$('.triviabox').empty()
+		createQuestions();
+    });
+    $('.clearbutton').on('click',function() {
+        location.reload();
+    });
 }
 
 start();
