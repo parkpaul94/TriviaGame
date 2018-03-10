@@ -138,7 +138,7 @@ var AnswerCheck = function() {
    var right = QandA[QNumber]['right'];
    var wrong = QandA[QNumber]['wrong'];
    console.log(QNumber);
-   
+
    if(userAnswer === correctAnswer) {
 		$('.timerSection').empty();
 		rCount++;
