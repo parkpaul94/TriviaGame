@@ -124,4 +124,14 @@ var timeDecrement = function() {
 	
 }
 
+var AnswerCheck = function() {
+	//Get users answer choice
+   var userAnswer = $(this).data('type');
+   var correctAnswer = QandA[QNumber]['correct'];
+   var correctImg = QandA[QNumber]['imageUrl'];
+   var right = QandA[QNumber]['right'];
+   var wrong = QandA[QNumber]['wrong'];
+   console.log(QNumber);
+}
+
 start();
