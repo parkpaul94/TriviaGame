@@ -191,7 +191,6 @@ var AnswerCheck = function() {
 var gameOver = function() {
 	$('.triviabox').empty();
 	$('.timerSection').empty();
-	var scoreDiv = $('<div>');
 	scoreDiv.addClass('score');
 	scoreDiv.html('Correct: ' + rCount + '<br>' + 'Wrong: ' + wCount);
 	$('.triviabox').append(scoreDiv);

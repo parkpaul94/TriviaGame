@@ -8,14 +8,20 @@ body {
 	width: 100%;
 }
 
+.container {
+    margin: 0 auto;
+    width: 75%;
+}
+
 .mainbox {
-    height: 420px;
+    height: 425px;
+    width: 75%;
     background-color: white;
     text-align: center;
+    margin: 0 auto;
     padding: 1.15%;
     border-radius: 10px 10px 10px 10px;
     opacity: .75;
-    /* box-shadow: 5px 5px 5px black; */
 }
 
 .introfont {
@@ -30,7 +36,6 @@ body {
 }
 
 .triviabox{ 
-	/* margin-top: 100px; */
     text-align: center;
     opacity: .75;
  }
@@ -72,7 +77,6 @@ body {
  	padding: 30px;
  	font-size: 20px;
     margin: 10px;
-     
  }
 
  .wrongAnswer, .rightAnswer {
