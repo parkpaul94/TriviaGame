@@ -113,5 +113,15 @@ var timerStart = function() {
 	timer = setInterval(timeDecrement, 100);
 }
 
+var timeDecrement = function() { 
+	$('.progress-bar').width(gameTime + '%');
+	gameTime--;
+	if(gameTime === -10) { // If the gameTime is set as === 0 it finishes before the timer runs out
+		userAnswer = false;
+		clearInterval(timer);
+		AnswerCheck();
+	}
+	
+}
 
 start();
