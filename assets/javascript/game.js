@@ -95,8 +95,8 @@ var Answers = function() {
 		newbutton.text(answers);
 		$('.triviabox').append(newbutton);
 	}
-	$(document).off('click','.answers',AnswerCheck);
-	$(document).on('click','.answers',AnswerCheck);
+	$(document).off('click','.answers', AnswerCheck);
+	$(document).on('click','.answers', AnswerCheck);
 }
 
 var timerStart = function() { 
@@ -145,6 +145,12 @@ var AnswerCheck = function() {
 		$('.triviabox').append(newDiv);
 		clearInterval(timer)
 		QNumber++;
+
+	if(QNumber <= 7) {
+		setTimeout(function() {
+		$('.triviabox').empty();
+		createQuestions();}, 4000);
+	}
 	}
 }
 
