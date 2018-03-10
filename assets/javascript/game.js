@@ -149,9 +149,24 @@ var AnswerCheck = function() {
 	if(QNumber <= 7) {
 		setTimeout(function() {
 		$('.triviabox').empty();
-		createQuestions();}, 4000);
+		createQuestions();}, 100);
+	}
+	else {
+		setTimeout(gameOver, 3500);
 	}
 	}
 }
 
+var gameOver = function() {
+	$('.triviabox').empty();
+	$('.timerSection').empty();
+	var scoreDiv = $('<div>');
+	scoreDiv.addClass('score');
+	scoreDiv.html('Correct: ' + rCount + '<br>' + 'Wrong: ' + wCount);
+	$('.triviabox').append(scoreDiv);
+	var gameoverDiv = $('<div>');
+	gameoverDiv.addClass('gameOver');
+	gameoverDiv.html('Game Over!');
+	$('.triviabox').append(gameoverDiv);
+}
 start();
