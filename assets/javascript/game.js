@@ -108,7 +108,7 @@ var Answers = function() {
 
 var timerStart = function() { 
 	$('.timerSection').empty();
-	gameTime = 100;
+	gameTime = 4500;
 	var timeTag = $('<div>');
 	timeTag.addClass('time');
 	timeTag.addClass('progress');
@@ -117,7 +117,7 @@ var timerStart = function() {
 	progressBar.width(gameTime + '%');
 	$('.timerSection').append(timeTag);
 	$('.time').append(progressBar);	
-	timer = setInterval(timeDecrement, 100);
+	timer = setInterval(timeDecrement, 4500);
 }
 
 var timeDecrement = function() { 
@@ -191,6 +191,7 @@ var AnswerCheck = function() {
 var gameOver = function() {
 	$('.triviabox').empty();
 	$('.timerSection').empty();
+	var scoreDiv = $('<div>');
 	scoreDiv.addClass('score');
 	scoreDiv.html('Correct: ' + rCount + '<br>' + 'Wrong: ' + wCount);
 	$('.triviabox').append(scoreDiv);
@@ -207,7 +208,7 @@ var gameOver = function() {
     clearbutton.text('Clear');
     $('.triviabox').append(newbutton);
     $('.triviabox').append(clearbutton);
-	trivTime = 100;
+	trivTime = 4500;
 	QNumber = 1;
 	rCount = 0;
 	wCount = 0;
