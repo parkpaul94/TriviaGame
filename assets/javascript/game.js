@@ -66,8 +66,169 @@ var QandA = {
 				wrong: 'Wrong!',
 				correctImage:'assets/images/answers/eris.gif',
 				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            8:{
+				question:"What is Lord Voldemort family name?",
+				answers:['Gaunt','Selwyn','Lestrange','Greengrass'],
+				correct:'Gaunt',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/voldemort.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            9:{
+				question:"Who from below have won an Oscar?",
+				answers:['Brad Pitt','Johnny Depp','Tom Cruise','Nicolas Cage'],
+				correct:'Nicolas Cage',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/cage.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            10:{
+				question:"Who was NOT born the same year as Martin Luther King Jr?", //TOO LONG OF NAMES
+				answers:['Anne Frank','Grace Kelly','Elvis Presley','Audrey Hepburn'],
+				correct:'Elvis Presley',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/elvis.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            11:{
+				question:"According to Thomas Edison, 'genius' is one percent inspiration and 99%:",
+				answers:['Perspiration','Concentration','Genetics','Education'],
+				correct:'Perspiration',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/Perspiration.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            12:{
+				question:"O Romeo, Romeo, ____ art thou Romeo?",
+				answers:['Where','Were','Wherefore','Therefore'],
+				correct:'Wherefore',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/Wherefore.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            13:{
+				question:"What is the shallowest ocean in the world?",
+				answers:['Atlantic','Arctic','Indian','Pacific'],
+				correct:'Arctic',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/Arctic.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            14:{
+				question:"In the Simpsons, what is the brand of the beer served?",
+				answers:['Buzz','Alamo','Duff','Beer'],
+				correct:'Duff',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/duff.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            15:{
+				question:"Which of the following kills the most people annually?",
+				answers:['Sharks','Football','Deer','Ants'],
+				correct:'Deer',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/deer.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            16:{
+				question:"What was the breakfast beverage of choice prior to Coffee?",
+				answers:['OJ','Milk','Beer','Water'],
+				correct:'Beer',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/beer.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            17:{
+				question:"Who was the founder of Taco Bell?",
+				answers:['Drake Bell','Glen Bell','Graham Bell','John Bell'],
+				correct:'Glen Bell',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/taco.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            18:{
+				question:"What was the largest denomination of to circulate the US?",
+				answers:['$100','$1000','$10000','$100000'],
+				correct:'$10000',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/money.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            19:{
+				question:"What is NOT a color of an Olympic Flag rings?",
+				answers:['Red','Blue','White','Green'],
+				correct:'White',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/olympic.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            20:{
+				question:"The M&M in M&M's chocolate stands for?",
+				answers:['Milk & Malt','Mix & Match','Mars & Murrie','Mr & Mrs'],
+				correct:'Mars & Murrie',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/mm.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            21:{
+				question:"A ____ is a measurement of 1/100th of a second.",
+				answers:['Moot','Bloit','Shake','Jiffy'],
+				correct:'Jiffy',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/paint.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            22:{
+				question:"What is the largest amount in coins without being able to make a dollar?",
+				answers:['$1.19','$1.13','$1.01','$1.09'],
+				correct:'$1.19',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/coins.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            23:{
+				question:"Three Musketeers candy had which flavors prior to WWII?",
+				answers:['Chocolate','Vanilla','Strawberry','All 3'],
+				correct:'All 3',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/musketeers.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            24:{
+				question:"Australia was originally called ____",
+				answers:['New Holland','Austrialia','New Wales','Kingsland'],
+				correct:'New Holland',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/australia.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
+			},
+            25:{
+				question:"Which mascot wears a monocle?",
+				answers:['Monopoly Man','Mr. Peanut','Pringles','KFC'],
+				correct:'Mr. Peanut',
+				right: 'Correct!',
+				wrong: 'Wrong!',
+				correctImage:'assets/images/answers/peanut.gif',
+				wrongImage:'assets/images/answers/disappointed.gif'
 			}
-
 	};
 
 //==============================================================//
@@ -154,7 +315,7 @@ var AnswerCheck = function() {
 		clearInterval(timer)
 		QNumber++;
 
-	if(QNumber <= 7) {
+	if(QNumber <= 25) {
 		setTimeout(function() {
 		$('.triviabox').empty();
 		createQuestions();}, 4500);
@@ -177,7 +338,7 @@ var AnswerCheck = function() {
 		$('.triviabox').append(newDiv);
 		clearInterval(timer)
 		QNumber++;
-			if(QNumber <= 7) {  
+			if(QNumber <= 25) {  
 				setTimeout(function() {
 				$('.triviabox').empty();
 				createQuestions();}, 4500);
