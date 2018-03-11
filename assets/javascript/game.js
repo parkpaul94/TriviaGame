@@ -108,7 +108,7 @@ var Answers = function() {
 
 var timerStart = function() { 
 	$('.timerSection').empty();
-	gameTime = 4500;
+	gameTime = 100;
 	var timeTag = $('<div>');
 	timeTag.addClass('time');
 	timeTag.addClass('progress');
@@ -117,7 +117,7 @@ var timerStart = function() {
 	progressBar.width(gameTime + '%');
 	$('.timerSection').append(timeTag);
 	$('.time').append(progressBar);	
-	timer = setInterval(timeDecrement, 4500);
+	timer = setInterval(timeDecrement, 100);
 }
 
 var timeDecrement = function() { 
