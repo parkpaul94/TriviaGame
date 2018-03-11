@@ -1,7 +1,12 @@
 var time = 0;
 var rCount = 0;
 var wCount = 0;
-var QNumber = 1;
+//==================== THIS WILL MAKE IT PICK A RANDOM QUESTION FROM 1-25 ==================================
+// var minQ = 1;
+// var maxQ = 25;
+// var QNumber = Math.floor(Math.random() * ((maxQ-minQ)+1) + minQ);
+// =========================================================================================================
+var QNumber = 1; //THIS WILL MAKE THE QUESTION START FROM FIRST QUESTION
 var timer = '';
 var QandA = {
 			1:{
@@ -86,7 +91,7 @@ var QandA = {
 				wrongImage:'assets/images/answers/disappointed.gif'
 			},
             10:{
-				question:"Who was NOT born the same year as Martin Luther King Jr?", //TOO LONG OF NAMES
+				question:"Who was NOT born the same year as Martin Luther King Jr?", 
 				answers:['Anne Frank','Grace Kelly','Elvis Presley','Audrey Hepburn'],
 				correct:'Elvis Presley',
 				right: 'Correct!',
@@ -346,7 +351,7 @@ var AnswerCheck = function() {
 				else {
 					setTimeout(gameOver, 4500);
 					}
-	}
+		}
 }
 
 var gameOver = function() {
